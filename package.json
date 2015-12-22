@@ -8,7 +8,9 @@
     "test": "mocha",
     "lint": "jshint --exclude=node_modules/** **.js",
     "test:xunit": "npm run test -- --reporter xunit",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "configure:stage": "node infrastructure/dev.js",
+    "configure:production": "node infrastructure/prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +18,11 @@
     "body-parser": "1.14.2",
     "express": "4.13.3",
     "http": "0.0.0",
+    "lodash": "^3.10.1",
     "mongodb": "2.0.52"
   },
   "devDependencies": {
+    "heroin-js": "^1.4.0",
     "mocha": "2.3.4",
     "supertest": "1.1.0"
   }
