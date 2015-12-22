@@ -5,12 +5,13 @@ var MongoClient = require('mongodb').MongoClient;
 var app = express();
 
 
-var url = 'mongodb://192.168.99.100:32769/books';
+var url = process.env.MONGO_LAB_URI || 'mongodb://heroku_4x78mgjj:5c76vmaot6lpjfdubl2k6f1qc4@ds033285.mongolab.com:33285/heroku_4x78mgjj';
 var connection = MongoClient.connect(url);
-//var stockRepository = require('./stockRepository')(connection);
-var stockRepository = require('./inMemoryRepository');
+var stockRepository = require('./stockRepository')(connection);
+//var stockRepository = require('./inMemoryRepository');
 var routes = require('./routes')(stockRepository);
 
+//console.log(process.env);
 
 app.use(routes.logRequest);
 app.use(bodyParser.json());

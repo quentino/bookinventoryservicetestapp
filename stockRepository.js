@@ -1,10 +1,11 @@
 module.exports = function(connection){
+    const collectionName = 'booksmpawluk';
     return {
         findByIsbn: function(isbn){
             return connection
                 .then(function (db) {
                     console.log('connection');
-                    return db.collection('books');
+                    return db.collection(collectionName);
                 })
                 .then(function (collection) {
                     console.log('find');
@@ -15,7 +16,7 @@ module.exports = function(connection){
             return connection
                 .then(function (db) {
                     console.log('connection');
-                    return db.collection('books');
+                    return db.collection(collectionName);
                 })
                 .then(function (collection) {
                     console.log('update');
