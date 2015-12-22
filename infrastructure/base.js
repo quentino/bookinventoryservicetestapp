@@ -3,7 +3,7 @@ var baseConfig = {
     region: 'eu',
     maintenance: false,
     stack: 'cedar-14',
-    config_vars: {},
+    config_vars: {a: 'b'},
     addons: {},
     collaborators:
         [ 'bartlomiej.pacura@outlook.com',
