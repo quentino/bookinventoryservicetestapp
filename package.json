@@ -1,0 +1,25 @@
+{
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha",
+    "lint": "jshint --exclude=node_modules/** **.js",
+    "test:xunit": "npm run test -- --reporter xunit",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "express": "4.13.3",
+    "http": "0.0.0",
+    "mongodb": "2.0.52"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4",
+    "supertest": "1.1.0"
+  }
+}
