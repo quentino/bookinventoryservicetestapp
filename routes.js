@@ -1,7 +1,7 @@
 module.exports = function(stockRepository){
     return {
         getHome: function(req, res){
-            res.send('Hello World!');
+            res.send('Hello World!!!!');
         },
         updateOne: function(req, res){
             var isbn = req.body.isbn;
